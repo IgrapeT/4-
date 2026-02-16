@@ -1,0 +1,16 @@
+﻿  Call.cpp
+  Client.cpp
+  ClientForm.cpp
+  DataManager.cpp
+  main.cpp
+  MainForm.cpp
+  Tariff.cpp
+  TariffForm.cpp
+D:\прога\B666\B666\TariffForm.cpp(230,50): warning C5307: "System::String ^System::String::Replace(wchar_t,wchar_t)": аргумент (1) преобразован из "char" в "wchar_t". Отсутствует префикс кодировки "L" для символьного литерала?
+D:\прога\B666\B666\TariffForm.cpp(230,50): warning C5307: "System::String ^System::String::Replace(wchar_t,wchar_t)": аргумент (2) преобразован из "char" в "wchar_t". Отсутствует префикс кодировки "L" для символьного литерала?
+D:\прога\B666\B666\TariffForm.cpp(260,56): warning C5307: "System::String ^System::String::Replace(wchar_t,wchar_t)": аргумент (1) преобразован из "char" в "wchar_t". Отсутствует префикс кодировки "L" для символьного литерала?
+D:\прога\B666\B666\TariffForm.cpp(260,56): warning C5307: "System::String ^System::String::Replace(wchar_t,wchar_t)": аргумент (2) преобразован из "char" в "wchar_t". Отсутствует префикс кодировки "L" для символьного литерала?
+  .NETFramework,Version=v4.7.2.AssemblyAttributes.cpp
+  Создание кода...
+  Call.obj : обнаружен модуль MSIL; для MSIL последовательная компоновка отключена; выполняется полная компоновка
+  B666.vcxproj -> D:\прога\B666\x64\Debug\B666.exe

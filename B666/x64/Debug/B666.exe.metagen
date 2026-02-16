@@ -1,0 +1,103 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly B666, Version=0.0.*, Culture=Инвариантный язык (Инвариантная страна): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Assembly System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class ATSProject.Models.Call: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Int32, Int32, Int32, System.String, Int32, Double): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 Id : Public
+    Int32 ClientId : Public
+    Int32 TariffId : Public
+    System.String City : Public
+    Int32 Duration : Public
+    Double Cost : Public
+  Methods:
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class ATSProject.Models.Client: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Int32, System.String, System.String, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 Id : Public
+    System.String LastName : Public
+    System.String FirstName : Public
+    System.String PhoneNumber : Public
+  Methods:
+    GetFullName(): PrivateScope, Public, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class ATSProject.Forms.ClientForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(ATSProject.Models.Client): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    ATSProject.Models.Client ResultClient : Public
+Struct ATSProject.Forms.FormMode: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    ATSProject.Forms.FormMode Add = 0 : Public, Static, Literal, HasDefault
+    ATSProject.Forms.FormMode Edit = 1 : Public, Static, Literal, HasDefault
+Class ATSProject.Models.Tariff: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Int32, System.String, Double, System.String, Double): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Int32, System.String, Double, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 Id : Public
+    System.String City : Public
+    Double BaseCostPerMinute : Public
+    System.String StrategyType : Public
+    System.Nullable`1[System.Double] DiscountRate : Public
+  Methods:
+    CalculateCost(Int32): PrivateScope, Public, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class ATSProject.Data.DataManager: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Methods:
+    GetInstance(): PrivateScope, Public, Static, HideBySig
+    AddClient(Client): PrivateScope, Public, HideBySig
+    UpdateClient(Client): PrivateScope, Public, HideBySig
+    DeleteClient(Int32): PrivateScope, Public, HideBySig
+    FindClient(Int32): PrivateScope, Public, HideBySig
+    GetAllClients(): PrivateScope, Public, HideBySig
+    SortClientsByName(): PrivateScope, Public, HideBySig
+    AddTariff(Tariff): PrivateScope, Public, HideBySig
+    UpdateTariff(Tariff): PrivateScope, Public, HideBySig
+    DeleteTariff(Int32): PrivateScope, Public, HideBySig
+    FindTariff(Int32): PrivateScope, Public, HideBySig
+    GetAllTariffs(): PrivateScope, Public, HideBySig
+    SortTariffsByCity(): PrivateScope, Public, HideBySig
+    AddCall(Call): PrivateScope, Public, HideBySig
+    DeleteCall(Int32): PrivateScope, Public, HideBySig
+    GetAllCalls(): PrivateScope, Public, HideBySig
+    GetCallsByClient(Int32): PrivateScope, Public, HideBySig
+    SaveToFile(String): PrivateScope, Public, HideBySig
+    LoadFromFile(String): PrivateScope, Public, HideBySig
+    ClearAllData(): PrivateScope, Public, HideBySig
+    GetTotalClients(): PrivateScope, Public, HideBySig
+    GetTotalTariffs(): PrivateScope, Public, HideBySig
+    GetTotalCalls(): PrivateScope, Public, HideBySig
+Class ATSProject.Forms.TariffForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(ATSProject.Models.Tariff): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    ATSProject.Models.Tariff ResultTariff : Public
+Struct ATSProject.Forms.TariffForm+FormMode: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    FormMode Add = 0 : Public, Static, Literal, HasDefault
+    FormMode Edit = 1 : Public, Static, Literal, HasDefault
+Class ATSProject.Forms.MainForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
